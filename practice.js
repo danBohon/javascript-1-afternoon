@@ -39,17 +39,23 @@ let groceries = ["apples", "milk", "eggs", "bread"];
 //doubleCheck should return the array.
 
 let doubleCheck = (arr) => {
-  if (arr.includes("chocolate") === true) {
-    return arr;
+  if (arr.includes("chocolate") !== true) {
+     arr.push("chocolate");
+     return arr;
   }
-  else arr.push("chocolate");
+  else { 
   return arr;
+  }
 }
 // let doubleCheck = (arr) => {
-//   for (i=0, i<arr.length, i++) {
-//     if (arr[i] === chocolate) {
-//       return true;
-//     } 
+//   for (let i=0; i<arr.length; i++) {
+//     if (arr[i] === "chocolate") {
+//       return arr;
+//     }
+//     else {
+//       arr.push("chocolate");
+//       return arr;
+//     }
 //   }
 // }
 
@@ -98,8 +104,8 @@ let ruff = dog.bark();
 //Return mySum.
 
 let looper = (arrLoop) => {
-  var mySum = 0;
-  for (var i=0; i<arrLoop; i++) {
+  let mySum = 0;
+  for (var i=0; i<arrLoop.length; i++) {
     if (arrLoop[i] % 2 === 1 || arrLoop[i] >= 100) {
       mySum += arrLoop[i];
     }
