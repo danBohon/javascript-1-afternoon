@@ -39,13 +39,10 @@ let groceries = ["apples", "milk", "eggs", "bread"];
 //doubleCheck should return the array.
 
 let doubleCheck = (arr) => {
-  if (arr.includes("chocolate") !== true) {
+  if (!arr.includes("chocolate")){
      arr.push("chocolate");
-     return arr;
   }
-  else { 
   return arr;
-  }
 }
 // let doubleCheck = (arr) => {
 //   for (let i=0; i<arr.length; i++) {
